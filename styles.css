@@ -1,0 +1,399 @@
+/* Color Palette */
+:root {
+  --off-white: #FAF9F6;
+  --lavander-purple: #8584e8;
+  --ultra-violet: #7F00FF;
+  --ultra-black: #000000;
+  --light-gray: #D3D3D3;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Clearing all default browser padding and margins, adding our font and box sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--ultra-black);
+  color: var(--off-white);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.logo {
+  font-size: 45px;
+  color: var(--off-white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.8s; /* Add transition property here */
+}
+
+.logo:hover {
+  color: var(--ultra-violet);
+}
+
+.logo:not(:hover) {
+  color: var(--off-white); /* Add default color for non-hover state */
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--off-white);
+  text-decoration: none;
+  font-size: 35px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: var(--ultra-violet);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.6s; /* Update transition property to only transition width */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Main Content */
+
+.home {
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+
+}
+
+.home-content {
+
+  max-width: 600px;
+
+}
+
+.home-content h1 {
+
+  font-size: 8rem;
+  font-weight: 850;
+  line-height: 1,2;
+
+}
+
+.home-content h3 {
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ultra-violet);
+
+}
+
+.home-content p {
+
+  font-size: 1rem;
+  margin: 20px 0 40px;
+
+
+}
+
+.home-content .btn-box {
+
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+
+}
+
+.btn-box a {
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: var(--ultra-violet);
+  border: 2px solid var(--ultra-violet);
+  border-radius: 5000px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+
+}
+
+
+.btn-box a:nth-child(2) {
+
+  background: transparent;
+  color: var(--off-white);
+
+}
+
+.btn-box a:hover {
+
+  transform: scale(1.2);
+
+}
+
+#greeting {
+
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+  color: var(--ultra-violet);
+  font-weight: bold;
+
+}
+
+#name {
+
+  text-decoration: underline;
+  text-decoration-color: var(--ultra-violet);
+  text-decoration-thickness: 2.5px;
+  font-weight: 750;
+
+}
+
+.home-socials {
+
+  position: absolute;
+  bottom: 240px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Add this line */
+}
+
+.home-socials a {
+
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid var(--ultra-violet);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--off-white);
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+
+}
+
+.home-socials a::before {
+
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--ultra-violet);
+  z-index: -1;
+  transition: 0.5s;
+
+}
+
+.home-socials a:hover::before {
+
+  width: 100%;
+
+}
+
+/* about me (about.html) */
+
+.who-am-i {
+  margin-top: 35vh;
+  text-align: center;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.who-am-i h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--off-white);
+  margin-bottom: 10px;
+}
+
+.who-am-i p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+#questionmark {
+  color: var(--ultra-violet);
+}
+
+.portfolio-content {
+
+  height: 100vh;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10%;
+
+
+}
+
+.portfolio-content a {
+
+  color: var(--ultra-violet);
+  text-decoration: wavy;
+  font-size: 4rem;
+
+}
+
+/* Footer */
+footer {
+  font-family: 'segoe UI';
+  font-weight: 400;
+  background-color: var(--ultra-black);
+  color: var(--off-white);
+  padding: 25px 0;
+  text-align: center;
+}
+
+footer p {
+  color: var(--off-white);
+}
+
+/* Media Queries */
+
+/* Small screens */
+@media only screen and (max-width: 767px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  #links {
+    display: block;
+    margin-top: 10px;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .home-content h1 {
+    font-size: 25px;
+  }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-content h1 {
+    font-size: 28px;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 1024px) {
+  .home-content h1 {
+    font-size: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 767px) and (width: 390px) and (height: 844px) {
+  .home-socials {
+  bottom: 140px; /* Adjust the number of pixels as desired */
+  }
+  
+  .nav-container {
+  flex-direction: row;
+  justify-content: flex-end;
+  }
+  
+  nav ul {
+  flex-direction: row;
+  }
+  
+  nav ul li {
+  margin-left: 15px;
+  }
+  
+  .home-content h1 {
+
+  font-size: 1.5rem;
+  font-weight: 850;
+  line-height: 1,2;
+  align-items: center;
+  text-align: center;
+
+  }
+
+  .home-content h3 {
+
+  font-size: 1.3rem;
+  font-weight: 850;
+  line-height: 1,2;
+  align-items: center;
+  text-align: center;
+
+  }
+
+  .who-am-i p {
+
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 600px;
+    
+  }
+
+
+  }
