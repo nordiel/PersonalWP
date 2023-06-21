@@ -229,6 +229,7 @@ nav ul li a:hover::after {
 
   content: '';
   position: absolute;
+  display: inline-flex;
   top: 0;
   left: 0;
   width: 0;
@@ -310,6 +311,7 @@ footer p {
 
 /* Small screens */
 @media only screen and (max-width: 767px) {
+  /* Adjust navigation bar */
   .nav-container {
     flex-direction: column;
     align-items: center;
@@ -328,6 +330,7 @@ footer p {
     justify-content: space-between;
   }
 
+  /* Adjust home content */
   .home-content h1 {
     font-size: 25px;
   }
@@ -335,6 +338,7 @@ footer p {
 
 /* Medium screens */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust home content */
   .home-content h1 {
     font-size: 28px;
   }
@@ -342,58 +346,145 @@ footer p {
 
 /* Large screens */
 @media only screen and (min-width: 1024px) {
+  /* Adjust home content */
   .home-content h1 {
     font-size: 30px;
   }
 }
 
-
+/* Custom screen size */
 @media only screen and (max-width: 767px) and (width: 390px) and (height: 844px) {
+  /* Adjust home socials position */
   .home-socials {
-  bottom: 140px; /* Adjust the number of pixels as desired */
+    bottom: 140px;
   }
-  
+
+  /* Adjust navigation bar */
   .nav-container {
-  flex-direction: row;
-  justify-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
   }
-  
+
   nav ul {
-  flex-direction: row;
+    flex-direction: row;
   }
-  
+
   nav ul li {
-  margin-left: 15px;
+    margin-left: 15px;
   }
-  
+
+  /* Adjust home content */
   .home-content h1 {
-
-  font-size: 1.5rem;
-  font-weight: 850;
-  line-height: 1,2;
-  align-items: center;
-  text-align: center;
-
+    font-size: 1.5rem;
+    font-weight: 850;
+    line-height: 1.2;
+    align-items: center;
+    text-align: center;
   }
 
   .home-content h3 {
-
-  font-size: 1.3rem;
-  font-weight: 850;
-  line-height: 1,2;
-  align-items: center;
-  text-align: center;
-
+    font-size: 1.3rem;
+    font-weight: 850;
+    line-height: 1.2;
+    align-items: center;
+    text-align: center;
   }
 
+  /* Adjust about me content */
   .who-am-i p {
-
     font-size: 15px;
     line-height: 1.5;
     margin: 0 auto;
     max-width: 600px;
-    
+  }
+}
+
+/* Small screens (iPhone devices) */
+@media only screen and (max-width: 480px) {
+  /* Adjust navigation bar */
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-
+  nav ul {
+    display: none;
   }
+
+  #links {
+    display: block;
+    margin-top: 10px;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  /* Adjust home content */
+  .home-content h1 {
+    font-size: 25px;
+  }
+}
+
+/* Medium screens (laptops) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust home content */
+  .home-content h1 {
+    font-size: 28px;
+  }
+}
+
+/* Large screens (most PC screens) */
+@media only screen and (min-width: 1024px) {
+  /* Adjust home content */
+  .home-content h1 {
+    font-size: 30px;
+  }
+}
+
+/* Custom screen size */
+@media only screen and (max-width: 767px) and (width: 390px) and (height: 844px) {
+  /* Adjust home socials position */
+  .home-socials {
+    bottom: 140px;
+  }
+
+  /* Adjust navigation bar */
+  .nav-container {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin-left: 15px;
+  }
+
+  /* Adjust home content */
+  .home-content h1 {
+    font-size: 1.5rem;
+    font-weight: 850;
+    line-height: 1.2;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-content h3 {
+    font-size: 1.3rem;
+    font-weight: 850;
+    line-height: 1.2;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Adjust about me content */
+  .who-am-i p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
