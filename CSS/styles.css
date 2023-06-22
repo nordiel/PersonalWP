@@ -1,65 +1,76 @@
-/* Color Palette */
 :root {
   --off-white: #FAF9F6;
-  --lavander-purple: #8584e8;
   --ultra-violet: #7F00FF;
   --ultra-black: #000000;
-  --light-gray: #D3D3D3;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* Clearing all default browser padding and margins, adding our font and box sizing */
 * {
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+
 }
 
 a {
+
   text-decoration: none;
   color: inherit;
+
 }
 
 body {
+
   display: flex;
   flex-direction: column;
   background-color: var(--ultra-black);
   color: var(--off-white);
   font-family: 'Poppins', sans-serif;
+
 }
 
 @keyframes fade-in {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
-/* Navigation Bar */
+/* Navbar */
+
 .logo {
+
   padding-left: 25px;
   font-size: 45px;
   color: var(--off-white);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.8s; /* Add transition property here */
-  opacity: 0; /* Set initial opacity to 0 */
+  transition: color 0.8s;
+  opacity: 0;
   animation: fade-in 1s forwards;
+
 }
 
 .logo:hover {
+
   color: var(--ultra-violet);
+
 }
 
 .logo:not(:hover) {
-  color: var(--off-white); /* Add default color for non-hover state */
+
+  color: var(--off-white);
+
 }
 
 .nav-container {
+
   position: fixed;
   top: 0;
   left: 0;
@@ -69,34 +80,44 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  opacity: 0; /* Set initial opacity to 0 */
+  opacity: 0;
   animation: fade-in 1s forwards;
+
 }
 
 nav {
+
   padding-right: 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 nav ul {
+
   display: flex;
   list-style: none;
+
 }
 
 nav ul li {
+
   margin: 0 17px;
+   
 }
 
 nav ul li a {
+
   color: var(--off-white);
   text-decoration: none;
   font-size: 35px;
   position: relative;
+
 }
 
 nav ul li a::after {
+
   content: '';
   width: 0%;
   height: 3px;
@@ -104,11 +125,14 @@ nav ul li a::after {
   position: absolute;
   left: 0;
   bottom: -6px;
-  transition: width 0.6s; /* Update transition property to only transition width */
+  transition: width 0.6s;
+
 }
 
 nav ul li a:hover::after {
+
   width: 100%;
+
 }
 
 /* Main Content */
@@ -130,11 +154,29 @@ nav ul li a:hover::after {
 
 .home-content h1 {
 
-  font-size: 8rem;
+  font-size: 2rem;
   font-weight: 850;
-  line-height: 1,2;
-  opacity: 0; /* Set initial opacity to 0 */
+  line-height: 2, 2;
+  opacity: 0;
   animation: fade-in 1s forwards;
+
+}
+
+#greeting {
+
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: var(--ultra-violet);
+  font-weight: bold;
+
+}
+
+#name {
+
+  text-decoration: underline;
+  text-decoration-color: var(--ultra-violet);
+  text-decoration-thickness: 2.5px;
+  font-weight: 750;
 
 }
 
@@ -143,7 +185,7 @@ nav ul li a:hover::after {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--ultra-violet);
-  opacity: 0; /* Set initial opacity to 0 */
+  opacity: 0;
   animation: fade-in 1s forwards;
 
 }
@@ -151,10 +193,9 @@ nav ul li a:hover::after {
 .home-content p {
 
   font-size: 1rem;
-  margin: 20px 0 40px;
-  opacity: 0; /* Set initial opacity to 0 */
+  margin: 15px 0 40px;
+  opacity: 0;
   animation: fade-in 1s forwards;
-
 
 }
 
@@ -164,10 +205,12 @@ nav ul li a:hover::after {
   justify-content: space-between;
   width: 355px;
   height: 50px;
-  opacity: 0; /* Set initial opacity to 0 */
+  opacity: 0;
   animation: fade-in 1s forwards;
 
 }
+
+/* Contact Me and Get CV buttons */
 
 .btn-box a {
 
@@ -200,34 +243,19 @@ nav ul li a:hover::after {
 
 }
 
-#greeting {
-
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  color: var(--ultra-violet);
-  font-weight: bold;
-
-}
-
-#name {
-
-  text-decoration: underline;
-  text-decoration-color: var(--ultra-violet);
-  text-decoration-thickness: 2.5px;
-  font-weight: 750;
-
-}
+/* Social Media Icons */
 
 .home-socials {
 
   position: absolute;
-  bottom: 240px;
+  bottom: 200px;
   width: 170px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Add this line */
-  opacity: 0; /* Set initial opacity to 0 */
+  flex-wrap: wrap;
+  opacity: 0;
   animation: fade-in 1s forwards;
+
 }
 
 .home-socials a {
@@ -241,7 +269,7 @@ nav ul li a:hover::after {
   background: transparent;
   border: 2.5px solid var(--ultra-violet);
   border-radius: 50%;
-  font-size: 26px;
+  font-size: 30px;
   color: var(--off-white);
   text-decoration: none;
   z-index: 1;
@@ -270,10 +298,14 @@ nav ul li a:hover::after {
 
 }
 
+/* Portrait */
+
 .image-container {
+
   position: absolute;
   top: 285px;
   right: 385px;
+
 }
 
 .portrait {
@@ -285,10 +317,9 @@ nav ul li a:hover::after {
 
 }
 
-/* about me (about.html) */
-
 /* About Me */
 .who-am-i {
+
   text-align: left;
   position: fixed;
   top: 55%;
@@ -297,28 +328,35 @@ nav ul li a:hover::after {
   max-width: 650px;
   opacity: 0;
   animation: fade-in 1s forwards;
+
 }
 
 .who-am-i h2 {
+
   font-size: 4rem;
   font-weight: bold;
   color: var(--off-white);
   margin-bottom: 10px;
   animation: fade-in 1s forwards;
+
 }
 
 .who-am-i p {
+
   font-size: 1.2rem;
   line-height: 1.5;
   color: var(--off-white);
   margin-bottom: 20px;
   text-align: justify;
   animation: fade-in 1s forwards;
+
 }
 
 #questionmark {
+
   color: var(--ultra-violet);
   animation: fade-in 1s forwards;
+
 }
 
 .about-img {
@@ -327,226 +365,263 @@ nav ul li a:hover::after {
   top: 50%;
   left: 135%;
   transform: translateY(-50%);
-  max-width: 475px; /* Set the maximum width of the image */
-  border-radius: 2%; /* Adjust the border-radius as needed */
-}
-
-
-.portfolio-content {
-
-  height: 100vh;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 10%;
-
+  max-width: 475px;
+  border-radius: 2%;
 
 }
 
-.portfolio-content a {
-
-  color: var(--ultra-violet);
-  text-decoration: wavy;
-  font-size: 4rem;
-
-}
-
-.footer {
-  background-color: var(--ultra-black);
-  padding: 20px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  opacity: 0; /* Set initial opacity to 0 */
-  animation: fade-in 1s forwards;
-}
-
-.footer p {
-  color: var(--off-white);
-  font-size: 1rem;
-}
-
-.footer :hover {
-  color: var(--ultra-violet);
-}
+/* Portfolio Content */
 
 /* Media Queries */
 
-/* Small screens */
-@media only screen and (max-width: 767px) {
-  /* Adjust navigation bar */
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  nav ul {
+
+@media (max-width: 500px) {
+
+  .portrait {
+
     display: none;
+
   }
 
-  #links {
-    display: block;
-    margin-top: 10px;
-  }
-
-  nav {
-    justify-content: space-between;
-  }
-
-  /* Adjust home content */
-  .home-content h1 {
-    font-size: 25px;
-  }
-}
-
-/* Medium screens */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Adjust home content */
-  .home-content h1 {
-    font-size: 28px;
-  }
-}
-
-/* Large screens */
-@media only screen and (min-width: 1024px) {
-  /* Adjust home content */
-  .home-content h1 {
-    font-size: 30px;
-  }
-}
-
-/* Custom screen size */
-@media only screen and (max-width: 767px) and (width: 390px) and (height: 844px) {
-  /* Adjust home socials position */
   .home-socials {
-    bottom: 140px;
+
+    bottom: 200px;
+
   }
 
-  /* Adjust navigation bar */
-  .nav-container {
-    flex-direction: row;
-    justify-content: flex-end;
+  .btn-box a {
+
+    width: 140px;
+    height: 90%;
+  
   }
 
-  nav ul {
-    flex-direction: row;
+  .home-content .btn-box {
+
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 50px;
+
   }
 
-  nav ul li {
-    margin-left: 15px;
+  .home-content {
+
+    max-width: 1000px;
+  
   }
 
-  /* Adjust home content */
   .home-content h1 {
+
     font-size: 1.5rem;
     font-weight: 850;
-    line-height: 1.2;
-    align-items: center;
-    text-align: center;
+  
   }
 
   .home-content h3 {
+
     font-size: 1.3rem;
-    font-weight: 850;
-    line-height: 1.2;
-    align-items: center;
-    text-align: center;
+
   }
 
-  /* Adjust about me content */
-  .who-am-i p {
-    font-size: 15px;
-    line-height: 1.5;
-    margin: 0 auto;
-    max-width: 600px;
-  }
-}
+  .home-content p {
 
-/* Small screens (iPhone devices) */
-@media only screen and (max-width: 480px) {
-  /* Adjust navigation bar */
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
+    font-size: 18px;
+    margin: 20px 0 40px;
+
   }
 
-  nav ul {
-    display: none;
-  }
+  .logo {
 
-  #links {
-    display: block;
-    margin-top: 10px;
+    padding-left: 17px;
+    font-size: 35px;
+  
   }
 
   nav {
-    justify-content: space-between;
-  }
 
-  /* Adjust home content */
-  .home-content h1 {
-    font-size: 25px;
+    padding-right: 5px;
+
   }
+  
+
 }
 
-/* Medium screens (laptops) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Adjust home content */
-  .home-content h1 {
-    font-size: 28px;
-  }
-}
+@media (max-width: 450px) {
 
-/* Large screens (most PC screens) */
-@media only screen and (min-width: 1024px) {
-  /* Adjust home content */
-  .home-content h1 {
-    font-size: 30px;
-  }
-}
-
-/* Custom screen size */
-@media only screen and (max-width: 767px) and (width: 390px) and (height: 844px) {
-  /* Adjust home socials position */
   .home-socials {
-    bottom: 140px;
+
+    bottom: 110px;
+
   }
 
-  /* Adjust navigation bar */
-  .nav-container {
-    flex-direction: row;
-    justify-content: flex-end;
+  .btn-box a {
+
+    width: 140px;
+    height: 90%;
+  
   }
 
-  nav ul {
-    flex-direction: row;
+  .home-content .btn-box {
+
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 50px;
+
   }
 
-  nav ul li {
-    margin-left: 15px;
+  .home-content {
+
+    max-width: 1000px;
+  
   }
 
-  /* Adjust home content */
   .home-content h1 {
+
     font-size: 1.5rem;
     font-weight: 850;
-    line-height: 1.2;
-    align-items: center;
-    text-align: center;
+  
   }
 
   .home-content h3 {
+
     font-size: 1.3rem;
-    font-weight: 850;
-    line-height: 1.2;
-    align-items: center;
-    text-align: center;
+
   }
 
-  /* Adjust about me content */
-  .who-am-i p {
-    font-size: 15px;
-    line-height: 1.5;
-    margin: 0 auto;
-    max-width: 600px;
+  .home-content p {
+
+    font-size: 18px;
+    margin: 20px 0 40px;
+
   }
+
+  .logo {
+
+    padding-left: 17px;
+    font-size: 35px;
+  
+  }
+
+  nav {
+
+    padding-right: 5px;
+
+  }
+  
+
 }
+
+@media (width: 375px) {
+
+  .home-socials {
+
+    top: 600px;
+
+  }
+
+  .btn-box a {
+
+    width: 140px;
+    height: 90%;
+  
+  }
+
+  .home-content .btn-box {
+
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 50px;
+
+  }
+
+  .home-content {
+
+    max-width: 1000px;
+  
+  }
+
+  .home-content h1 {
+
+    font-size: 1.5rem;
+    font-weight: 850;
+  
+  }
+
+  .home-content h3 {
+
+    font-size: 1.3rem;
+
+  }
+
+  .home-content p {
+
+    font-size: 18px;
+    margin: 20px 0 40px;
+
+  }
+
+  .logo {
+
+    padding-left: 17px;
+    font-size: 35px;
+  
+  }
+
+  nav {
+
+    padding-right: 5px;
+
+  }
+  
+
+}
+
+
+
+@media (max-width: 400px) {
+
+  .home-socials {
+
+    bottom: 150px;
+
+  }
+
+}
+
+@media (max-width: 1280px) {
+
+.image-container {
+
+  position: absolute;
+  top: 245px;
+  right: 40px;
+
+}
+
+.portrait {
+
+  border-radius: 500px;
+  width: 480px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+}
+
+@media (max-width: 770px) {
+  
+  .portrait {
+  
+    display: none;
+  
+  }
+  
+  
+  }
+
