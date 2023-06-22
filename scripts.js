@@ -1,26 +1,27 @@
-const greetings = ["Hello", "Hola", "Bonjour", "Namaste", "Shalom"];
+const greetings = ["Hello", "Hola", "Bonjour", "Namaste", "Shalom"]; // array of greetings
+
 let currentIndex = 0;
 
 function changeGreeting() {
+
   const spanElement = document.getElementById("greeting");
 
   // Fade out the greeting text
   spanElement.style.opacity = 0;
 
   setTimeout(() => {
-    // Get the greeting at the current index
+    // get greeting at the current index
     spanElement.textContent = greetings[currentIndex];
 
-    // Fade in the greeting text
+    // fading greeting text
     spanElement.style.opacity = 1;
 
-    // Increment the current index
+    //incrementing the current index
     currentIndex = (currentIndex + 1) % greetings.length;
-  }, 500); // Delay the text update to allow for fade-out effect
+  }, 500); // delaying the text update to allow for fade-out effect
 }
 
-// Call changeGreeting() initially
 changeGreeting();
 
-// Call changeGreeting() every 4 seconds (5000 milliseconds)
+// calling the changeGreeting() function every 4 seconds
 setInterval(changeGreeting, 4000);
