@@ -22,5 +22,5 @@ function changeGreeting() {
 // Call changeGreeting() initially
 changeGreeting();
 
-// Call changeGreeting() every 5 seconds (5000 milliseconds)
-setInterval(changeGreeting, 5000);
+// Call changeGreeting() every 4 seconds (5000 milliseconds)
+setInterval(changeGreeting, 4000);
