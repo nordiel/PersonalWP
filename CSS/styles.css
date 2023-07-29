@@ -149,6 +149,7 @@ nav ul li a:hover::after {
 
 .home-content {
 
+  display: flexbox;
   max-width: 600px;
 
 }
@@ -315,9 +316,7 @@ nav ul li a:hover::after {
 
 .image-container {
 
-  position: absolute;
-  top: 245px;
-  right: 275px;
+  display: flexbox;
 
 }
 
