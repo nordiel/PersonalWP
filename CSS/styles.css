@@ -27,7 +27,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  background-color: var(--ultra-black);
+  background-color: var(--off-white);
   color: var(--off-white);
   font-family: 'Poppins', sans-serif;
 
@@ -66,7 +66,7 @@ body {
 
 .logo:not(:hover) {
 
-  color: var(--off-white);
+  color: var(--ultra-black);
 
 }
 
@@ -110,7 +110,7 @@ nav ul li {
 
 nav ul li a {
 
-  color: var(--off-white);
+  color: var(--ultra-black);
   text-decoration: none;
   font-size: 35px;
   position: relative;
@@ -149,6 +149,7 @@ nav ul li a:hover::after {
 
 .home-content {
 
+  color: var(--ultra-black);
   display: flexbox;
   max-width: 600px;
 
@@ -156,6 +157,7 @@ nav ul li a:hover::after {
 
 .home-content h1 {
 
+  color: var(--ultra-black);
   font-size: 2rem;
   font-weight: 850;
   line-height: 2, 2;
@@ -241,7 +243,7 @@ nav ul li a:hover::after {
 .btn-box a:nth-child(2) {
 
   background: transparent;
-  color: var(--off-white);
+  color: var(--ultra-black);
 
 }
 
@@ -278,7 +280,7 @@ nav ul li a:hover::after {
   border: 2.5px solid var(--ultra-violet);
   border-radius: 50%;
   font-size: 30px;
-  color: var(--off-white);
+  color: var(--ultra-black);
   text-decoration: none;
   z-index: 1;
   overflow: hidden;
@@ -312,32 +314,35 @@ nav ul li a:hover::after {
 
 }
 
-/* Portrait */
-
 .image-container {
 
-  display: flexbox;
+  display: inline-flexbox;
+  text-align: right;
+
+}
+
+.image-container:hover .portrait {
+
+  transform: scale(1.1);
 
 }
 
 .portrait {
 
-  border-radius: 500px;
-  width: 650px;
-  align-items: center;
-  justify-content: center;
+  display: inline-flexbox;
+  margin-left: 270px;
+  transition: transform 0.3s ease;
+  width: 450px;
 
 }
+
 
 /* About Me */
 .who-am-i {
 
-  text-align: left;
-  position: fixed;
-  top: 55%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  max-width: 650px;
+  display: flexbox;
+  text-align: center;
+  justify-content: center;
   opacity: 0;
   animation: fade-in 1s forwards;
 
@@ -347,7 +352,7 @@ nav ul li a:hover::after {
 
   font-size: 4rem;
   font-weight: bold;
-  color: var(--off-white);
+  color: var(--ultra-black);
   margin-bottom: 10px;
   animation: fade-in 1s forwards;
 
@@ -357,9 +362,8 @@ nav ul li a:hover::after {
 
   font-size: 1.2rem;
   line-height: 1.5;
-  color: var(--off-white);
+  color: var(--ultra-black);
   margin-bottom: 20px;
-  text-align: justify;
   animation: fade-in 1s forwards;
 
 }
@@ -373,14 +377,21 @@ nav ul li a:hover::after {
 
 .about-img {
 
-  position: fixed;
-  top: 50%;
-  left: 135%;
-  transform: translateY(-50%);
+  display: flexbox;
+  align-items: right;
   max-width: 475px;
   border-radius: 2%;
 
 }
+
+footer {
+
+  color: var(--ultra-black); 
+  font-size: 12px;
+  text-align: center;
+
+}
+
 
 /* Portfolio Content */
 
