@@ -332,7 +332,7 @@ nav ul li a:hover::after {
   display: inline-flexbox;
   margin-left: 270px;
   transition: transform 0.3s ease;
-  width: 450px;
+  width: 451px;
 
 }
 
