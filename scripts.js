@@ -26,4 +26,8 @@ changeGreeting();
 // calling the changeGreeting() function every 4 seconds
 setInterval(changeGreeting, 4000);
 
+// About function
+
+
+
 
