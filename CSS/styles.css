@@ -338,49 +338,53 @@ nav ul li a:hover::after {
 
 
 /* About Me */
-.who-am-i {
 
-  display: flexbox;
-  text-align: center;
-  justify-content: center;
-  opacity: 0;
-  animation: fade-in 1s forwards;
+.about {
 
-}
-
-.who-am-i h2 {
-
-  font-size: 4rem;
-  font-weight: bold;
   color: var(--ultra-black);
-  margin-bottom: 10px;
-  animation: fade-in 1s forwards;
+  width: 100%;
+  padding: 78px 0px;
+  margin: 10px auto;
 
 }
 
-.who-am-i p {
+.about h3 {
 
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: var(--ultra-black);
-  margin-bottom: 20px;
-  animation: fade-in 1s forwards;
+  font-size: 3rem;
 
 }
 
-#questionmark {
+.about h5 {
 
-  color: var(--ultra-violet);
-  animation: fade-in 1s forwards;
+  font-size: 1.5rem;
 
 }
 
-.about-img {
 
-  display: flexbox;
-  align-items: right;
-  max-width: 475px;
-  border-radius: 2%;
+.about img {
+
+  height: auto;
+  width: 500px;
+  border-radius: 10px;
+
+
+}
+
+.about-text {
+
+  width: 550px;
+
+}
+
+.main {
+
+  width: 1130px;
+  max-width: 95%;
+  margin: 70px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
 
 }
 
@@ -389,6 +393,15 @@ footer {
   color: var(--ultra-black); 
   font-size: 12px;
   text-align: center;
+
+}
+
+#who-i-am {
+
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: var(--ultra-violet);
+  font-weight: bold;
 
 }
 
