@@ -1,10 +1,12 @@
+/* Color Variables */
 :root {
+
   --off-white: #FAF9F6;
-  /* --ultra-violet: #7F00FF; */
-  --atomic-yellow: #FCCF55;
   --ultra-black: #000000;
+
 }
 
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
@@ -36,37 +38,25 @@ body {
 @keyframes fade-in {
   0% {
     opacity: 0;
+    transform: translateY(20px);
   }
-
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Navbar */
-
+/* Navbar styles */
 .logo {
 
   padding-left: 25px;
   font-size: 45px;
-  color: var(--off-white);
+  color: var(--ultra-black);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.8s;
   opacity: 0;
   animation: fade-in 1s forwards;
-
-}
-
-.logo:hover {
-
-  color: var(--atomic-yellow);
-
-}
-
-.logo:not(:hover) {
-
-  color: var(--ultra-black);
 
 }
 
@@ -105,7 +95,7 @@ nav ul {
 nav ul li {
 
   margin: 0 17px;
-   
+
 }
 
 nav ul li a {
@@ -122,7 +112,7 @@ nav ul li a::after {
   content: '';
   width: 0%;
   height: 3px;
-  background: var(--atomic-yellow);
+  background: var(--ultra-black);
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -136,8 +126,7 @@ nav ul li a:hover::after {
 
 }
 
-/* Main Content */
-
+/* Main Content styles */
 .home {
 
   height: 95vh;
@@ -170,7 +159,7 @@ nav ul li a:hover::after {
 
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  color: var(--atomic-yellow);
+  color: var(--ultra-black);
   font-weight: bold;
 
 }
@@ -178,7 +167,7 @@ nav ul li a:hover::after {
 #name {
 
   text-decoration: underline;
-  text-decoration-color: var(--atomic-yellow);
+  text-decoration-color: var(--ultra-black);
   text-decoration-thickness: 2.5px;
   font-weight: 750;
 
@@ -188,7 +177,7 @@ nav ul li a:hover::after {
 
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--atomic-yellow);
+  color: var(--ultra-black);
   opacity: 0;
   animation: fade-in 1s forwards;
 
@@ -215,7 +204,6 @@ nav ul li a:hover::after {
 }
 
 /* Contact Me and Get CV buttons */
-
 .btn-box a {
 
   display: inline-flex;
@@ -223,8 +211,8 @@ nav ul li a:hover::after {
   align-items: center;
   width: 165px;
   height: 100%;
-  background: var(--atomic-yellow);
-  border: 2px solid var(--atomic-yellow);
+  background: var(--off-white);
+  border: 2px solid var(--ultra-black);
   border-radius: 5000px;
   text-decoration: none;
   font-weight: 800;
@@ -238,7 +226,6 @@ nav ul li a:hover::after {
   color: black;
 
 }
-
 
 .btn-box a:nth-child(2) {
 
@@ -254,7 +241,6 @@ nav ul li a:hover::after {
 }
 
 /* Social Media Icons */
-
 .home-socials {
 
   position: absolute;
@@ -277,7 +263,7 @@ nav ul li a:hover::after {
   width: 50px;
   height: 50px;
   background: transparent;
-  border: 2.5px solid var(--atomic-yellow);
+  border: 2.5px solid var(--ultra-black);
   border-radius: 50%;
   font-size: 30px;
   color: var(--ultra-black);
@@ -296,7 +282,7 @@ nav ul li a:hover::after {
   left: 0;
   width: 0;
   height: 100%;
-  background: var(--atomic-yellow);
+  background: var(--ultra-black);
   z-index: -1;
   transition: 0.5s;
 
@@ -310,7 +296,7 @@ nav ul li a:hover::after {
 
 .home-socials a:hover {
 
-  color: black;
+  color: var(--off-white);
 
 }
 
@@ -321,24 +307,15 @@ nav ul li a:hover::after {
 
 }
 
-.image-container:hover .portrait {
-
-  transform: scale(1.1);
-
-}
-
 .portrait {
-
   display: inline-flexbox;
   margin-left: 180px;
-  transition: transform 0.3s ease;
   width: 451px;
-
+  opacity: 0; 
+  animation: fade-in 1s forwards; 
 }
 
-
 /* About Me */
-
 .about {
 
   color: var(--ultra-black);
@@ -364,17 +341,16 @@ nav ul li a:hover::after {
 
 .about h5 {
 
+  margin: 10px 0;
   font-size: 1.5rem;
 
 }
-
 
 .about img {
 
   height: auto;
   width: 500px;
   border-radius: 10px;
-
 
 }
 
@@ -394,7 +370,6 @@ nav ul li a:hover::after {
   align-items: center;
   justify-content: space-around;
   
-
 }
 
 footer {
@@ -409,21 +384,9 @@ footer {
 
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  color: var(--atomic-yellow);
+  color: var(--ultra-black);
   font-weight: bold;
 
-}
-
-
-@keyframes fade-in {
-  0% {
-      opacity: 0; 
-      transform: translateY(20px); 
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0); 
-  }
 }
 
 .about {
@@ -439,9 +402,7 @@ footer {
   opacity: 1; 
 }
 
-
 /* Portfolio Content */
-
 .projects {
 
   color: #000000;
@@ -466,7 +427,7 @@ footer {
 }
 
 .projects-heading span {
-  color: var(--atomic-yellow);
+  color: var(--ultra-black);
 }
 
 .projects-heading h3 {
@@ -513,7 +474,7 @@ footer {
 
   width: 800px;
   padding: 15px;
-  border: 1px solid var(--atomic-yellow);
+  border: 1px solid var(--ultra-black);
   margin: 20px;
 
 }
@@ -524,7 +485,6 @@ footer {
   height: 100%;
   overflow: hidden;
   border-radius: 5px;
-
 
 }
 
@@ -539,14 +499,16 @@ footer {
 
   display: block; 
   margin-top: 10px; 
-  color: var(--atomic-yellow); 
+  color: var(--ultra-black); 
   text-decoration: none; 
   text-align: center;
 
 }
 
 .project-link:hover {
+
   text-decoration: underline;
+
 }
 
 .projects-container .project-box {
@@ -591,7 +553,7 @@ footer {
   nav ul li {
   
     margin: 0 10px;
-     
+  
   }
   
   nav ul li a {

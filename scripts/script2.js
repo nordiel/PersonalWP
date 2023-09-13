@@ -1,5 +1,10 @@
-const greetings = ["Technology Enthusiast", "Pet Friendly", "Python Enjoyer", "JavaScript Enjoyer", "C# Hater"]; // array of greetings
-
+const greetings = [
+  "Technology Enthusiast 👨‍💻 ",
+  "Pet Friendly 🐾",
+  "Loves Dr.Pepper 🥤",
+  "JavaScript Enjoyer 🚀",
+  "Extroverted Geek 🤓" // array of greetings
+]
 let currentIndex = 0;
 
 function changeGreeting() {
