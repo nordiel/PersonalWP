@@ -1,9 +1,12 @@
+// array of greetings
 const greetings = [
-  "Technology Enthusiast 👨‍💻 ",
-  "Pet Friendly 🐾",
+  "Technology enthusiast 👨‍💻 ",
+  "Pet friendly 🐾",
   "Loves Dr.Pepper 🥤",
-  "JavaScript Enjoyer 🚀",
-  "Extroverted Geek 🤓" // array of greetings
+  "JavaScript enjoyer 🚀",
+  "Extroverted geek 🤓",
+  "Photography enthusiast 📸" ,
+  "Gamer 🎮"
 ]
 let currentIndex = 0;
 
